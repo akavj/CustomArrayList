@@ -95,4 +95,15 @@ public class CustomArrayList<T> extends ArrayList<T> {
 		}
 
 	}
+
+	public void modifyKey(T key, T element) {
+		int index = 0;
+		for (int i = 0; i < (arrayKey.size()) && i < (arrayValue.size()); i++) {
+			if (arrayKey.get(i).equals(key)) {
+				index = i;
+
+			}
+		}
+		arrayValue.set(index, element);
+	}
 }
