@@ -19,10 +19,10 @@ public class CustomArrayList<T> extends ArrayList<T> {
 		this.size = array.size();
 	}
 
-	public void findAt(T index) {
+	public void findAt(int index) {
 
-		if ((int) index < this.size)
-			System.out.println(array.get((int) index));
+		if (index < this.size)
+			System.out.println(array.get(index));
 		else
 			System.out.println("Array size is lesser than the index provided");
 	}
@@ -36,9 +36,9 @@ public class CustomArrayList<T> extends ArrayList<T> {
 		return size;
 	}
 
-	public void removeAt(T index) {
-		if ((int) index < this.size)
-			array.remove((int) index);
+	public void removeAt(int index) {
+		if (index < this.size)
+			array.remove(index);
 		else
 			System.out.println("Array size is lesser than the index provided");
 	}
@@ -60,17 +60,17 @@ public class CustomArrayList<T> extends ArrayList<T> {
 	public void getAllKeyValue() {
 
 		for (int i = 0; i < (arrayKey.size()) && i < (arrayValue.size()); i++) {
-			System.out.print(arrayKey.get((int) i));
+			System.out.print(arrayKey.get(i));
 			System.out.print("->");
-			System.out.println(arrayValue.get((int) i));
+			System.out.println(arrayValue.get(i));
 		}
 	}
 
 	public void keyValueGet(int index) {
 
-		System.out.print(arrayKey.get((int) index));
+		System.out.print(arrayKey.get(index));
 		System.out.print("->");
-		System.out.println(arrayValue.get((int) index));
+		System.out.println(arrayValue.get(index));
 
 	}
 
@@ -96,7 +96,7 @@ public class CustomArrayList<T> extends ArrayList<T> {
 
 	}
 
-	public void modifyKey(T key, T element) {
+	public void modifyValue(T key, T element) {
 		int index = 0;
 		for (int i = 0; i < (arrayKey.size()) && i < (arrayValue.size()); i++) {
 			if (arrayKey.get(i).equals(key)) {
